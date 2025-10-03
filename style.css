@@ -1,0 +1,106 @@
+/* Base Styles */
+body {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #000;
+}
+
+.theme-selector-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#theme-selector {
+  padding: 6px 12px;
+  font-size: 16px;
+}
+
+/* Main content styling */
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* Header styling */
+header {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+}
+
+header h2 {
+  font-size: 1.2rem;
+  color: #006EB6;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+}
+header h2 {
+  position: relative;
+  display: inline-block; /* needed to contain the ::after */
+  padding-bottom: 10px;
+}
+
+/* Decorative underline */
+header h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 120%; /* longer than the text */
+  background-color: currentColor; /* same color as the text */
+  transform: translateX(-10%);
+}
+
+/* Footer styling */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+
+footer img {
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+footer img:hover {
+  opacity: 0.85;
+}
+
+/* Dark Theme */
+.dark {
+  background-color: #333;
+  color: white;
+}
+
+.dark main {
+  background-color: #444;
+  border-color: #666;
+}
+
+.dark header h2 {
+  color: #66BFFF; /* Accessible lighter blue */
+}
+
